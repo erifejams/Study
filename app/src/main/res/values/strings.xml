@@ -7,6 +7,14 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!--THIS IS FOR THE POMODORO TIMER-->
+    <string name="TIMER">TIMER</string>
+    <string name="start_countdown">Start</string>
+    <string name="restart_countdown">Restart</string>
+    <string name="stop_countdown">Stop</string>
+    <string name="hello_first_fragment">10:00</string>
+
+    <!--THIS IS FOR THE LOGIN-->
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Report</string>
     <string name="menu_slideshow">Profile</string>

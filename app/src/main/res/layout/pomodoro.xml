@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pomodoro">
+
+
+    <TextView
+        android:id="@+id/TIMER"
+        android:layout_width="139dp"
+        android:layout_height="143dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="120dp"
+        android:text="@string/TIMER"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#040404"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timer_countdownText"
+        android:layout_width="139dp"
+        android:layout_height="143dp"
+        android:text="@string/hello_first_fragment"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#040404"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/buttonStartCountdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.591"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonStartCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E89A0E0E"
+        android:text="@string/start_countdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timer_countdownText" />
+
+    <Button
+        android:id="@+id/stopCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stop_countdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timer_countdownText" />
+
+    <Button
+        android:id="@+id/restart_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/restart_countdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timer_countdownText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
