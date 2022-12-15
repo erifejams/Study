@@ -1,5 +1,6 @@
 package com.example.study;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -14,7 +15,17 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+
+
 import com.example.study.databinding.ActivityMainBinding;
+
+// added
+import android.widget.Button;
+
+
+
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,6 +58,34 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        // **** Changed from here****
+
+        // Navigate to POMODORO app
+        setContentView(R.layout.activity_main);
+
+        final Button  button_pomodoro = (Button) findViewById(R.id.button_pomodoro);
+        button_pomodoro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent to_pomodoro = new Intent(getApplicationContext(), pomodoro.class);
+                startActivity(to_pomodoro);
+            }
+        });
+
+        // Navigate to User Current Status
+
+        setContentView(R.layout.activity_main);
+
+        final Button  button_current_status = (Button) findViewById(R.id.button_current_status);
+        button_current_status.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent to_status = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(to_status);
+            }
+        });
+
     }
 
     @Override
