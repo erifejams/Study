@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         button_pomodoro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent to_pomodoro = new Intent(getApplicationContext(), pomodoro.class);
+                Intent to_pomodoro = new Intent("com.example.study.pomodoro");
                 startActivity(to_pomodoro);
             }
         });
