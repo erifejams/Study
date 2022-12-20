@@ -1,10 +1,15 @@
 package com.example.study;
 
+import static android.app.PendingIntent.getActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Menu;
 
+import com.example.study.databinding.FragmentCurrentStatusBinding;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -21,12 +26,15 @@ import com.example.study.databinding.ActivityMainBinding;
 
 // added
 import android.widget.Button;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+    private Menu menu;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +44,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
+        binding.appBarMain.toolbar.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-
             }
         });
         DrawerLayout drawer = binding.drawerLayout;
@@ -49,46 +56,41 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_home, R.id.nav_report)
+                R.id.nav_home, R.id.nav_report, R.id.nav_profile, R.id.nav_current_status, R.id.nav_pomodoro)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+        // **** Changed from here****
 
-
-        // **** Changed from here ****
-
-        // Navigate to POMODORO Timer
-        setContentView(R.layout.activity_main);
-
-        final Button  button_pomodoro = (Button) findViewById(R.id.button_pomodoro);
-        button_pomodoro.setOnClickListener(new View.OnClickListener() {
+        // Navigate to POMODORO
+        final Button  button_study = (Button) findViewById(R.id.button_study);
+        button_study.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent to_pomodoro = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(to_pomodoro);
 
+                Intent to_pomodoro = new Intent(getApplicationContext(), pomodoro.class);
+                startActivity(to_pomodoro);
             }
         });
 
         // Navigate to User Current Status
 
-        final Button  button_current_status = (Button) findViewById(R.id.button_current_status);
-        button_current_status.setOnClickListener(new View.OnClickListener() {
+        final Button  button_user_status = (Button) findViewById(R.id.button_status);
+        button_user_status.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent to_status = new Intent(getApplicationContext(), MainActivity.class);
+                Intent to_status = new Intent(getApplicationContext(), current_status.class);
                 startActivity(to_status);
-
             }
         });
-
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        this.menu = menu;
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
@@ -100,4 +102,5 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }

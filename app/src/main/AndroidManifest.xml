@@ -27,14 +27,11 @@
             </intent-filter>
         </activity>
 
-
         <activity
             android:name=".pomodoro"
             android:exported="false"
             android:label="@string/user_page"
             android:theme="@style/Theme.Study.NoActionBar">
-
-
             <intent-filter>
                 <action android:name="com.example.study.pomodoro" />
 
@@ -58,6 +55,43 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <!--        <activity-->
+        <!--            android:name=".current_status"-->
+        <!--            android:exported="false"-->
+        <!--            android:label="@string/user_page"-->
+        <!--            android:theme="@style/Theme.Study.NoActionBar">-->
+
+        <!--            <intent-filter>-->
+        <!--                <action android:name="com.example.study.MainActivity" />-->
+        <!--                <category android:name="android.intent.category.DEFAULT" />-->
+        <!--            </intent-filter>-->
+        <!--        </activity>-->
+
+        <!--        <activity-->
+        <!--            android:name=".current_status"-->
+        <!--            android:exported="false"-->
+        <!--            android:label="@string/user_page"-->
+        <!--            android:theme="@style/Theme.Study.NoActionBar">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="com.example.study.current_status" />-->
+
+        <!--                <category android:name="android.intent.category.DEFAULT" />-->
+        <!--            </intent-filter>-->
+        <!--        </activity>-->
+
+        <activity android:name=".current_status"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
     </application>
 
