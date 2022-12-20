@@ -24,7 +24,7 @@ public class ReportFragment extends Fragment {
         binding = FragmentReportBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textReport;
+        final TextView textView = binding.reportHeading;
         reportViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
