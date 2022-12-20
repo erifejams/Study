@@ -44,4 +44,7 @@
     <string name="login_failed">"Login failed"</string>
     <string name="user_page" />
     <string name="current_status">Current Status</string>
+    <string name="report">Report</string>
+    <string name="profile">Profile</string>
+    <string name="logout">logout</string>
 </resources>
