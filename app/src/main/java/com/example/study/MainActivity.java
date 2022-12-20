@@ -23,10 +23,6 @@ import com.example.study.databinding.ActivityMainBinding;
 import android.widget.Button;
 
 
-
-
-
-
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
@@ -45,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
             }
         });
         DrawerLayout drawer = binding.drawerLayout;
@@ -59,23 +56,23 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-        // **** Changed from here****
 
-        // Navigate to POMODORO app
+
+        // **** Changed from here ****
+
+        // Navigate to POMODORO Timer
         setContentView(R.layout.activity_main);
 
         final Button  button_pomodoro = (Button) findViewById(R.id.button_pomodoro);
         button_pomodoro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent to_pomodoro = new Intent("com.example.study.pomodoro");
+                Intent to_pomodoro = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(to_pomodoro);
             }
         });
 
         // Navigate to User Current Status
-
-        setContentView(R.layout.activity_main);
 
         final Button  button_current_status = (Button) findViewById(R.id.button_current_status);
         button_current_status.setOnClickListener(new View.OnClickListener() {

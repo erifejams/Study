@@ -6,78 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="292dp"
-        android:layout_height="192dp"
+        android:layout_width="278dp"
+        android:layout_height="168dp"
         android:src="@drawable/ic_main_homescreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.176" />
-
+        app:layout_constraintVertical_bias="0.149" />
 
     <TextView
         android:id="@+id/txt_home_welcome"
-        android:layout_width="332dp"
-        android:layout_height="31dp"
+        android:layout_width="380dp"
+        android:layout_height="35dp"
         android:fontFamily="@font/graduate"
-        android:text="Welcome to the GoStudy App"
+        android:text="Welcome to GoStudy App"
+        android:textAlignment="center"
         android:textColor="#12B15F"
-        android:textSize="20sp"
+        android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.121" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        android:textColor="#FFFFFF"
-        app:backgroundTint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_home_welcome"
-        app:layout_constraintVertical_bias="0.904" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="146dp"
         android:layout_height="126dp"
         android:src="@drawable/timer_svgrepo_com"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_home_welcome"
-        app:layout_constraintVertical_bias="0.627" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="146dp"
-        android:layout_height="126dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/ic_menu_profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/main_quote" />
+        app:layout_constraintVertical_bias="0.334" />
 
     <Button
         android:id="@+id/button_pomodoro"
         android:layout_width="146dp"
         android:layout_height="37dp"
+        android:fontFamily="@font/comfortaa_bold"
         android:text="POMODORO"
-        android:textSize="11dp"
-        app:backgroundTint="#1273EC"
+        android:textSize="10sp"
+        app:backgroundTint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,26 +64,31 @@
         android:id="@+id/button_current_status"
         android:layout_width="146dp"
         android:layout_height="37dp"
+        android:fontFamily="@font/comfortaa_bold"
         android:text="Current Status"
-        android:textSize="11dp"
-        app:backgroundTint="#1273EC"
+        android:textSize="10sp"
+        app:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toEndOf="@+id/button_pomodoro"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/main_quote"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="299dp"
+        android:layout_height="46dp"
         android:fontFamily="@font/graduate"
-        android:text="Now study in more efficient way with GoStudy app!"
+        android:text="Now with GoStudy App, you can study in more efficient way!"
+        android:textAlignment="center"
         android:textColor="#000000"
-        app:fontFamily="@font/adamina"
+        app:fontFamily="@font/comfortaa_bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_home_welcome" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_home_welcome"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/home_screen"
@@ -122,5 +104,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="146dp"
+        android:layout_height="126dp"
+        android:src="@drawable/ic_main_status"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

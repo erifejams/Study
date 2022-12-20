@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/nav_report"
-        android:name="com.example.study.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:name="com.example.study.ui.report.ReportFragment"
+        android:label="Report"
+        tools:layout="@layout/fragment_report" />
 
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.example.study.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:name="com.example.study.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

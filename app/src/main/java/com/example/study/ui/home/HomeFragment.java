@@ -10,7 +10,14 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.study.R;
 import com.example.study.databinding.FragmentHomeBinding;
+
+// imports
+import android.widget.Button;
+import android.content.Intent;
+
+
 
 public class HomeFragment extends Fragment {
 
