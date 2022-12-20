@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent to_pomodoro = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(to_pomodoro);
+
             }
         });
 
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent to_status = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(to_status);
+
             }
         });
 
