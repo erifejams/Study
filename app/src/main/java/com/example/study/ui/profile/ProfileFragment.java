@@ -31,4 +31,9 @@ public class ProfileFragment extends Fragment {
         profileViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }

@@ -5,7 +5,7 @@
     <string name="nav_header_user_name">User Name</string>
     <string name="nav_header_title">GoStudy</string>
     <string name="nav_header_subtitle">Menu</string>
-    <string name="nav_header_user_id">first_name.last_name@usi.ch</string>
+    <string name="nav_header_user_id">first_name.last_name@mail.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
