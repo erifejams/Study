@@ -1,32 +1,23 @@
 package com.example.study;
 
-import static android.app.PendingIntent.getActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Menu;
+import android.widget.Button;
+import android.widget.ImageButton;
 
-import com.example.study.databinding.FragmentCurrentStatusBinding;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
-
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
-
-
 
 import com.example.study.databinding.ActivityMainBinding;
-
-// added
-import android.widget.Button;
-import android.widget.Toast;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -34,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
     private Menu menu;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -77,13 +68,23 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Navigate to User Current Status
-
         final Button  button_user_status = (Button) findViewById(R.id.button_status);
         button_user_status.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent to_status = new Intent(getApplicationContext(), current_status.class);
                 startActivity(to_status);
+            }
+        });
+
+        ImageButton btn1 = (ImageButton) findViewById(R.id.imageButtonExit);
+        btn1.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                finish();
+                System.exit(0);
             }
         });
     }
@@ -102,5 +103,4 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
-
 }
