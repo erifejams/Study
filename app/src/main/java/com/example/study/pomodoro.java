@@ -3,6 +3,7 @@
 package com.example.study;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.LayoutInflater;
@@ -25,7 +26,7 @@ public class pomodoro extends AppCompatActivity {
     public TextView timerCountdownText;
     public Button startCountdown;
     public Button button_Restart;
-    // public Button stop_Countdown;
+    public Button button_back_toMain;
 
     private CountDownTimer countDownTimer;
     private static final long startTiming = 1500000; //25 minutes
@@ -36,24 +37,30 @@ public class pomodoro extends AppCompatActivity {
     @SuppressLint("MissingInflatedId")
 
     public void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-
         // Problem was here. fragment_current_status was used instead of fragment_pomodoro
         setContentView(R.layout.fragment_pomodoro);
-
-//        View root = inflater.inflate(R.layout.fragment_pomodoro, container, false);
 
         timerCountdownText = (TextView) findViewById(R.id.timer_countdownText);
         startCountdown = (Button) findViewById(R.id.buttonStartCountdown); //start button
         button_Restart = (Button) findViewById(R.id.pomodoroRestartCountdown); //stop button
         // stop_Countdown= (Button) findViewById(R.id.pomodoroStopCountdown); //stop button
 
+
+        // Navigate to Main Screen
+        final Button  button_back_toMain = (Button) findViewById(R.id.button_back_toMain);
+        button_back_toMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toMainScreen = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(toMainScreen);
+            }
+        });
         startCountdown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //this is to start or stop the timer
 
+                //this is to start or stop the timer
                 if (timerRunning) {
                     startCountdown.setText("Start");
                     Toast.makeText(getApplicationContext(), "Timer Paused", Toast.LENGTH_SHORT).show();
@@ -63,16 +70,9 @@ public class pomodoro extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Timer Started", Toast.LENGTH_SHORT).show();
                     startTimer();
                 }
-                // NavHostFragment.findNavController(FirstFragment.this.navigate(R.id.action_FirstFragment_to_SecondFragment);
+
             }
         });
-
-//        stop_Countdown.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                stopTimer();
-//            }
-//        });
 
         button_Restart.setOnClickListener(new View.OnClickListener() {
             @Override
