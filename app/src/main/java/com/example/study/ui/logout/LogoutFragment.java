@@ -1,4 +1,4 @@
-package com.example.study.ui.home;
+package com.example.study.ui.logout;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,29 +10,30 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.study.databinding.FragmentHomeBinding;
+import com.example.study.databinding.FragmentLogoutBinding;
 
-public class HomeFragment extends Fragment {
+public class LogoutFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentLogoutBinding binding;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        LogoutViewModel logoutViewModel =
+                new ViewModelProvider(this).get(LogoutViewModel.class);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentLogoutBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHomeTitle;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.logoutApp;
+        logoutViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
-    /*
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
-    }*/
+    }
+    
 }
