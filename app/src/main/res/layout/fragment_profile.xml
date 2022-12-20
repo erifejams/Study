@@ -7,156 +7,132 @@
     tools:context=".ui.profile.ProfileFragment">
 
     <TextView
-        android:id="@+id/textUserDetails"
-        android:layout_width="272dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="@font/comfortaa_bold"
-        android:text="Your Details"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="#0C670F"
-        android:textSize="23dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.351" />
-
-    <TextView
-        android:id="@+id/text_user_name"
+        android:id="@+id/profile_user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/autour_one"
-        android:text="@string/nav_header_title"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/secular_one"
+        android:text="@string/nav_header_user_name"
         android:textAlignment="center"
         android:textColor="#5C1A55"
-        android:textSize="35sp"
+        android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textUserDetails"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.09" />
-
-    <ImageView
-        android:id="@+id/profile_user_image"
-        android:layout_width="94dp"
-        android:layout_height="92dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.168"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/user_mail_id"
+        android:id="@+id/profile_user_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/adamina"
-        android:text="@string/nav_header_subtitle"
-        app:layout_constraintBottom_toTopOf="@+id/textUserDetails"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_user_name"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textDOB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/autour_one"
-        android:text="DoB(dd.mm.yyyy): "
-        android:textColor="#000000"
+        android:fontFamily="@font/anaheim"
+        android:text="firstname_lastname@usi.ch"
+        android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textUserDetails"
-        app:layout_constraintVertical_bias="0.062" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_user_name" />
 
     <TextView
-        android:id="@+id/textWeight"
-        android:layout_width="129dp"
-        android:layout_height="21dp"
-        android:fontFamily="@font/autour_one"
-        android:text="Weight (Kg):  "
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textUserDetails"
-        app:layout_constraintVertical_bias="0.359" />
-
-    <TextView
-        android:id="@+id/textGender"
+        android:id="@+id/profile_gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:fontFamily="@font/autour_one"
-        android:text="Gender: "
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/user_gender"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textUserDetails"
-        app:layout_constraintVertical_bias="0.405" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_logout"
+        app:layout_constraintStart_toStartOf="@+id/profile_height"
+        app:layout_constraintTop_toBottomOf="@+id/profile_height"
+        app:layout_constraintVertical_bias="0.196" />
 
     <TextView
-        android:id="@+id/textDisease"
+        android:id="@+id/profile_disease"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:fontFamily="@font/autour_one"
-        android:text="Disease: "
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/user_disease"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textUserDetails"
-        app:layout_constraintVertical_bias="0.566" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_logout"
+        app:layout_constraintStart_toStartOf="@+id/profile_gender"
+        app:layout_constraintTop_toBottomOf="@+id/profile_gender"
+        app:layout_constraintVertical_bias="0.486" />
 
     <TextView
-        android:id="@+id/textHeight"
-        android:layout_width="129dp"
-        android:layout_height="21dp"
-        android:fontFamily="@font/autour_one"
-        android:text="Height (Cm): "
+        android:id="@+id/profile_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/user_height"
         android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_logout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_weight"
+        app:layout_constraintTop_toBottomOf="@+id/profile_weight"
+        app:layout_constraintVertical_bias="0.132" />
+
+    <TextView
+        android:id="@+id/profile_date_of_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/user_birth_date"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.235"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textUserDetails"
-        app:layout_constraintVertical_bias="0.206" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profile_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/user_weight"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_date_of_birth"
+        app:layout_constraintTop_toBottomOf="@+id/profile_date_of_birth"
+        app:layout_constraintVertical_bias="0.1" />
 
     <Button
-        android:id="@+id/button_erase"
+        android:id="@+id/button_logout"
         android:layout_width="133dp"
         android:layout_height="50dp"
         android:backgroundTint="#000000"
-        android:fontFamily="@font/comfortaa_bold"
-        android:text="Erase Data"
+        android:fontFamily="@font/secular_one"
+        android:text="Log Out"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textUserDetails"
-        app:layout_constraintVertical_bias="0.868" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.954" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="102dp"
+        android:layout_height="95dp"
+        app:layout_constraintBottom_toTopOf="@+id/profile_date_of_birth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_user_id"
+        app:layout_constraintVertical_bias="0.404"
+        tools:src="@tools:sample/avatars" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
