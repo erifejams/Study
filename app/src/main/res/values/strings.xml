@@ -47,4 +47,8 @@
     <string name="report">Report</string>
     <string name="profile">Profile</string>
     <string name="logout">Logout</string>
+    <string name="textview">This graph shows your eda through your study session.</string>
+    <string name="textview2">This graph shows your heart rate through your study session.</string>
+    <string name="userSeeData">Want to see your data? click the button</string>
+    <string name="load_your_data">load your data</string>
 </resources>

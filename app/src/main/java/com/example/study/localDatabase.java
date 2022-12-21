@@ -21,9 +21,11 @@ public class localDatabase extends SQLiteOpenHelper {
     private static final String TABLE_NAME = "user_condition";
     private static final String COLUMN_ID = "user_id";
     private static final String Date = "date";
-    private static final String Stress_Level = "book title";
-    private static final String Sleep_Quality = "sleep Quality";
+    private static final String Stress_Level = "stress level";
+    private static final String Temperature = "temperature";
     private static final String Heart_Rate = "Heart Rate";
+    private static final String timestamp = "Timestamp";
+    private static final String eda= "eda";
 
     //constructor
     localDatabase(@Nullable Context context) {
@@ -40,7 +42,9 @@ public class localDatabase extends SQLiteOpenHelper {
                 " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 Stress_Level + "INTEGER, " +
                 Date + " TEXT, " +
-                Sleep_Quality + "INTEGER, " +
+                Temperature + "INTEGER, " +
+                timestamp + " INTEGER, " +
+                eda + " INTEGER, " +
                 Heart_Rate + "INTEGER);";
         sqLiteDatabase.execSQL(query);
     }
@@ -53,14 +57,16 @@ public class localDatabase extends SQLiteOpenHelper {
 
 
     //dummy data for now
-    void addData(String userIDString, String DateOfOccur, int stressLevel, String sleepQuality, int HeartRate){
+    void addData(String userIDString, String DateOfOccur, int timestamp, int stressLevel, int eda, int Temperature, int HeartRate){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
         cv.put(Date, DateOfOccur);
-        cv.put(Sleep_Quality, sleepQuality);
+        cv.put(String.valueOf(timestamp), timestamp);
         cv.put(Stress_Level, stressLevel);
         cv.put(Heart_Rate, HeartRate);
+        cv.put(String.valueOf(eda), eda);
+        cv.put(String.valueOf(Temperature), Temperature);
 
         //values that we imported is added to database
         long result = sqLiteDatabase.insert(TABLE_NAME,null, cv);
@@ -73,13 +79,14 @@ public class localDatabase extends SQLiteOpenHelper {
     }
 
     //updates row
-    void updateData(String userID, String DateOfOccur, int stressLevel, String sleepQuality, int HeartRate){
+    void updateData(String userID, String DateOfOccur, int stressLevel, int eda, int HeartRate){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
         cv.put(Date, DateOfOccur);
-        cv.put(Sleep_Quality, sleepQuality);
+        cv.put(Temperature, Temperature);
         cv.put(Stress_Level, stressLevel);
+        cv.put(String.valueOf(eda), eda);
         cv.put(Heart_Rate, HeartRate);
 
         //values that we imported is added to database
