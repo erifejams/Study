@@ -27,6 +27,8 @@ The data was explored and here is some visualisation of some of our explored dat
 <br>
 
 # App Architecture
+Changes to the architecture were made. In the database, its uses sqlite instead of CloremDB.
+
 ![architecture](https://user-images.githubusercontent.com/44726422/218860762-5cbb4ae8-2ee2-4318-8836-a8bf9db8e014.png)
 
 <br>
