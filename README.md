@@ -26,6 +26,10 @@ The data was explored and here is some visualisation of some of our explored dat
 
 <br>
 
+# App Architecture
+![architecture](https://user-images.githubusercontent.com/44726422/218860762-5cbb4ae8-2ee2-4318-8836-a8bf9db8e014.png)
+
+
 # Video of App running
 https://user-images.githubusercontent.com/44726422/218853647-3c7f365a-fe56-493c-b4f1-995bed6a54de.mp4
 
