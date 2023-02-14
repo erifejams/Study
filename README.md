@@ -5,7 +5,7 @@ It aims to solve the problem of reducing the negative impact long hours of study
 We wore an E4 wristband and oura ring to collect our heart rate, temperature and electrodermal activity(EDA) over a number of weeks.
 
 
-#Visualisation
+# Visualisation
 The data was explored and here is some visualisation of some of our explored data for the heart rate, temperature and EDA:
 
 **Temperature**
