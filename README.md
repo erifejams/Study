@@ -22,3 +22,8 @@ The data was explored and here is some visualisation of some of our explored dat
 
 # Video of App running
 https://user-images.githubusercontent.com/44726422/218853647-3c7f365a-fe56-493c-b4f1-995bed6a54de.mp4
+
+# Todo
+- finish implementing the database in the app.
+- Train a machine learning model using our data for receommendation.
+- Provide some visualization to the user about the stress level or the productivity.
