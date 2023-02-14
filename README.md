@@ -1,6 +1,4 @@
 # GoStudy 
-<em>(incomplete project)</em>
-
 It aims to solve the problem of reducing the negative impact long hours of study can have on students. It solves this problem by measuring and analyzing the users heart rate, stress level, emotions and their state when they're studying. By getting this analysis, we will be able to tell the users when its time to stop studying and take a break. During this break when their state is ok, we can recommend when to start studying again.
 
 <br>
